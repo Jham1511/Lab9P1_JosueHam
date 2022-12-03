@@ -69,13 +69,13 @@ public class Lab9P1_JosueHam {
         }//Fin for i
         System.out.print("Celulas Vivas: " + coordenadas);
         System.out.println();
-       /* for (int i = 0; i < 10; i++) {
+       for (int i = 0; i < 10; i++) {
             
             for (int j = 0; j < 10; j++) {
                 System.out.print("["+tablero[i][j]+"]");
             }
             System.out.println("");
-        }*/
+        }
         p1.setCoordenadas(coordenadas);
         return tablero;
     } //Fin del metodo crear matriz

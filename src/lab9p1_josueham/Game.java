@@ -50,11 +50,14 @@ public class Game {
 
     public void jugar(int Turnos) {
         for (int i = 0; i < Turnos; i++) {
-            System.out.print(Print(coordenadas));
+            nextGen();
             System.out.println("");
             System.out.println("Ronda: "+i);
             System.out.println("Celulas vivas: " + coordenadas);
-            nextGen();
+            System.out.print(Print(coordenadas));
+            System.out.println("");
+            
+            
         }
     }
 
