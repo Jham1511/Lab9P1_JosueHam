@@ -31,6 +31,7 @@ public class Lab9P1_JosueHam {
                     p1.setNext(next);
                     p1.setTurnos(Turnos);
                     p1.jugar(Turnos);
+                   
                 }//Fin case 1
                 break;
 
@@ -54,9 +55,9 @@ public class Lab9P1_JosueHam {
     }//Metodo menu
 
     public static int[][] lectura(int[][] tablero, int[][] next, ArrayList<String> coordenadas) {
-        for (int i = 0; i < tablero.length; i++) {
-            for (int j = 0; j < tablero[i].length; j++) {
-                if ((i == 0 || j == 0) || (i == tablero.length - 1 || j == tablero.length - 1)) {
+       for (int i = 0; i < 10; i++) {
+            for (int j = 0; j < 10; j++) {
+                if ((i == 0 || j == 0 || i == tablero.length-1 || j == tablero[0].length-1)) {
                     tablero[i][j] = 0;
                 } else {
                     tablero[i][j] = aleatorio.nextInt(2);
@@ -66,7 +67,15 @@ public class Lab9P1_JosueHam {
                 }
             }//Fin for j
         }//Fin for i
-        System.out.println("Celulas vivas: " + coordenadas);
+        System.out.print("Celulas Vivas: " + coordenadas);
+        System.out.println();
+       /* for (int i = 0; i < 10; i++) {
+            
+            for (int j = 0; j < 10; j++) {
+                System.out.print("["+tablero[i][j]+"]");
+            }
+            System.out.println("");
+        }*/
         p1.setCoordenadas(coordenadas);
         return tablero;
     } //Fin del metodo crear matriz
